@@ -1,13 +1,17 @@
 import React from "react";
-import { Hero } from "../pages/hero";
+import { Hero } from "../components/hero";
 import { useText } from "../../../text";
+import ButtonAppBar from "../components/navBar";
 
 export const WauMaus = () => {
     const text = useText()
     return (
-        <Hero 
-            header={text.landing.wauMaus}
-            body={text.landing.mission}
-        />
+        <>
+            <ButtonAppBar />
+            <Hero 
+                header={text.landing.wauMaus}
+                body={text.landing.mission}
+                />
+        </>
     )
 }
