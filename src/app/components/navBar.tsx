@@ -16,22 +16,28 @@ export default function ButtonAppBar() {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          <Button>
+            <Button>
             <Image src={'/assets/Redrum.png'} alt='redrum' width={50} height={50}/>
-          </Button>
-          <LinkBox>
-            <Typography variant="h6">
-                Home
-            </Typography>
-            <Typography variant="h6">
-                About
-            </Typography>
-            <Typography variant="h6">
-                Contact
-            </Typography>
-          </LinkBox>
+            </Button>
+            <LinkBox sx={buttons}>
+              <Typography variant="h6">
+                  Home
+              </Typography>
+              <Typography variant="h6">
+                  About
+              </Typography>
+              <Typography variant="h6">
+                  Contact
+              </Typography>
+            </LinkBox>
         </Toolbar>
       </AppBar>
     </Box>
   );
+}
+
+const buttons = {
+  display: 'flex',
+  flexDirection: 'row',
+  gridGap: '24px'
 }
