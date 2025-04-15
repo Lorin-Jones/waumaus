@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import * as React from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -8,29 +8,21 @@ import { Button, styled } from '@mui/material';
 import Image from 'next/image';
 
 const LinkBox = styled('div')({
-    gridGap: '8px'
-})
+  gridGap: '8px',
+});
 
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
-        <Toolbar>
-            <Button>
-            <Image src={'/assets/Redrum.png'} alt='redrum' width={50} height={50}/>
-            </Button>
-            <LinkBox sx={buttons}>
-              <Typography variant="h6">
-                  Home
-              </Typography>
-              <Typography variant="h6">
-                  About
-              </Typography>
-              <Typography variant="h6">
-                  Contact
-              </Typography>
-            </LinkBox>
-        </Toolbar>
+      <AppBar position="static" color="secondary">
+        <StyledToolbar>
+          <Typography variant="h6">WauMaus</Typography>
+          <LinkBox sx={buttons}>
+            <Button color="inherit">Home</Button>
+            <Button color="inherit">About</Button>
+            <Button color="inherit">Contact</Button>
+          </LinkBox>
+        </StyledToolbar>
       </AppBar>
     </Box>
   );
@@ -39,5 +31,11 @@ export default function ButtonAppBar() {
 const buttons = {
   display: 'flex',
   flexDirection: 'row',
-  gridGap: '24px'
-}
+  gridGap: '16px',
+};
+
+const StyledToolbar = styled(Toolbar)(({ theme }) => ({
+  display: 'flex',
+  justifyContent: 'space-between',
+  backgroundColor: theme.palette.primary.main,
+}));
