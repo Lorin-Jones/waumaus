@@ -10,7 +10,21 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends(
+    "next/core-web-vitals", 
+    "next/typescript", 
+    "plugin:@typescript-eslint/recommended",
+    "prettier"
+  ),
+    {
+      plugins: ["@typescript-eslint", "prettier"],
+      rules: {
+        "prettier/prettier": "error",
+        "@typescript-eslint/indent": ["error", 2],
+        "react/jsx-indent": ["error", 2],
+        "react/jsx-indent-props": ["error", 2],
+      },
+    },
 ];
 
 export default eslintConfig;

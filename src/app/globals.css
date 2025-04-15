@@ -5,7 +5,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #F2ECCC;
+    --background: #ffffff;
     --foreground: #ededed;
   }
 }
@@ -13,6 +13,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'rl-aqva-black', sans-serif;
   margin: 0;
 }
