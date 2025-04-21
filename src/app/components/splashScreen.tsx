@@ -31,4 +31,9 @@ const Video = styled('video')({
   justifyContent: 'center',
   height: 'auto',
   width: '100vw',
+  position: 'fixed',
+  top: 0,
+  left: 0,
+  zIndex: 9999,
+  objectFit: 'cover',
 });
