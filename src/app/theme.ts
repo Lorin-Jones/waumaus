@@ -13,13 +13,22 @@ export const theme = createTheme({
       dark: '#8E5285',
     },
     background: {
-      default: '#f0f0f0',
-      // default: '#F2ECCC',
+      // default: '#f0f0f0',
+      default: '#F2ECCC',
     },
   },
   typography: {
     h1: {
       fontFamily: '"rl-aqva", sans-serif',
+    },
+    h4: {
+      fontFamily: '"proxima-nova-condensed", sans-serif',
+      fontWeight: 400,
+    },
+    h5: {
+      fontFamily: '"rl-aqva", sans-serif',
+      fontSize: '2rem',
+      fontWeight: 400,
     },
     h6: {
       fontFamily: '"rl-aqva", sans-serif',
@@ -29,11 +38,15 @@ export const theme = createTheme({
     body1: {
       fontFamily: '"proxima-nova-condensed", sans-serif',
       fontWeight: 400,
+      fontSize: '1.5rem',
     },
     button: {
       fontFamily: '"proxima-nova-condensed", sans-serif',
       fontWeight: 400,
       fontSize: '1rem',
     },
+  },
+  shape: {
+    borderRadius: 8,
   },
 });
