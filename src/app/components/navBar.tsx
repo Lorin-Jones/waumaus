@@ -11,11 +11,8 @@ const LinkBox = styled('div')({
 });
 
 const scrollToSection = (id: string) => {
-  console.log(`Scrolling to section with id: ${id}`);
   const section = document.getElementById(id);
-  console.log('Section found:', section);
   if (section) {
-    console.log(section);
     section.scrollIntoView({ behavior: 'smooth' });
   }
 };
