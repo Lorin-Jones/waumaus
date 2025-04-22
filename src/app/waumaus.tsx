@@ -4,7 +4,7 @@ import { Hero } from './components/hero';
 import { useText } from '../../text';
 import ButtonAppBar from './components/navBar';
 import { SplashScreen } from '@/app/components/splashScreen';
-import { Box, styled } from '@mui/material';
+import { Box, styled, Toolbar } from '@mui/material';
 import { Main } from 'next/document';
 import { ContactForm } from '@/app/components/contact-form/contact';
 import { theme } from '@/app/theme';
@@ -30,21 +30,22 @@ export const WauMaus = () => {
 
       <Box sx={{ backgroundColor: theme.palette.background.default }}>
         <ButtonAppBar />
-        <Hero header={text.landing.wauMaus} body={text.landing.mission} />
-        <AboutUs />
-        <Box sx={{ py: 8 }}>
-          <DonorSection />
-        </Box>
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            padding: theme.spacing(4),
-            backgroundColor: theme.palette.primary.main,
-          }}
-        >
-          <ContactForm />
+        <Box>
+          <Box id={'hero'}>
+            <Hero header={text.landing.wauMaus} body={text.landing.mission} />
+          </Box>
+
+          <Box id={'about'}>
+            <AboutUs />
+          </Box>
+
+          <Box id={'donate'}>
+            <DonorSection />
+          </Box>
+
+          <Box id={'contact'}>
+            <ContactForm />
+          </Box>
         </Box>
       </Box>
     </>

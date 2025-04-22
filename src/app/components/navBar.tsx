@@ -5,25 +5,47 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { Button, styled } from '@mui/material';
-import Image from 'next/image';
 
 const LinkBox = styled('div')({
   gridGap: '8px',
 });
 
+const scrollToSection = (id: string) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
 export default function ButtonAppBar() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" color="secondary">
+      <AppBar position="fixed" color="secondary">
         <StyledToolbar>
           <Typography variant="h6">WauMaus</Typography>
           <LinkBox sx={buttons}>
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Contact</Button>
+            <Button
+              color="inherit"
+              onClick={() => {
+                console.log('Scrolling to hero');
+                scrollToSection('hero');
+              }}
+            >
+              Home
+            </Button>
+            <Button color="inherit" onClick={() => scrollToSection('about')}>
+              About
+            </Button>
+            <Button color="inherit" onClick={() => scrollToSection('donate')}>
+              Donate
+            </Button>
+            <Button color="inherit" onClick={() => scrollToSection('contact')}>
+              Contact
+            </Button>
           </LinkBox>
         </StyledToolbar>
       </AppBar>
+      <Toolbar />
     </Box>
   );
 }

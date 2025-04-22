@@ -17,7 +17,10 @@ export const useContactForm = () => {
     message: '',
   };
 
-  const onSubmit = async (values: ContactForm) => {
+  const onSubmit = async (
+    values: ContactForm,
+    { resetForm }: { resetForm: () => void }
+  ) => {
     const res = await fetch('/api/contact', {
       method: 'POST',
       headers: {
@@ -34,6 +37,7 @@ export const useContactForm = () => {
     const data = await res.json();
     if (res.ok) {
       alert('Message sent!');
+      resetForm();
     } else {
       console.error(data);
       alert('There was a problem sending your message.');
