@@ -1,3 +1,12 @@
+Welcome to WauMaus! This is a single page app introducing guests to Chattanooga's project based art nonprofit organization. This app features a splash page, an embedded donorbox widget, and a contact form with a next.js backend api.
+
+Waumaus uses:
+
+-React with Typescript
+-Material UI
+-Formik and Yup for forms and custom error handling
+-Brevo as an email api
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
