@@ -17,7 +17,7 @@ export default async function handler(
   const apiInstance = new Brevo.TransactionalEmailsApi();
 
   const emailContent = {
-    to: [{ email: 'lorin.jones@gmail.com', name: 'Lorin' }], // where the form email goes
+    to: [{ email: 'reed@windupgo.com', name: 'Reed' }], // where the form email goes
     sender: { name: 'Waumaus Contact Form', email: 'lorin.jones@gmail.com' }, // must be verified in Brevo
     subject: 'New Contact Form Submission',
     replyTo: { email, name: `${firstName} ${lastName}` },

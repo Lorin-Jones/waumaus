@@ -14,7 +14,7 @@ export const Hero: React.FC<HeroProps> = ({ header, body }) => {
     <StyledHero>
       <Box
         sx={{
-          bgcolor: '#CBA4C5',
+          bgcolor: '#FE955D',
           width: '100%',
           display: 'flex',
           justifyContent: 'center',
@@ -23,7 +23,7 @@ export const Hero: React.FC<HeroProps> = ({ header, body }) => {
         }}
       >
         <img
-          src="https://res.cloudinary.com/dlr2tm7qr/image/upload/v1744759299/WauMaus_Logo_BLACK_iqkn2z.png"
+          src="https://res.cloudinary.com/dlr2tm7qr/image/upload/v1745242986/WauMaus_Logo_WHITE_vdbxzh.png"
           alt="WauMaus Logo"
           width={400}
           height={400}
@@ -39,13 +39,15 @@ export const Hero: React.FC<HeroProps> = ({ header, body }) => {
           py: 8,
         }}
       >
-        <Typography variant="body1">{body}</Typography>
+        <Typography variant="h6" fontWeight={200}>
+          {body}
+        </Typography>
       </Box>
     </StyledHero>
   );
 };
 
-const StyledHero = styled(Box)(({ theme }) => ({
+const StyledHero = styled(Box)(({}) => ({
   display: 'flex',
   justifyContent: 'center',
   flexDirection: 'column',

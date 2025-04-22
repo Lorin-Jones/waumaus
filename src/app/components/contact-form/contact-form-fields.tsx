@@ -16,9 +16,6 @@ export const ContactFormFields = () => {
 
   return (
     <StyledForm>
-      <Typography variant="h4" gutterBottom>
-        Contact Us
-      </Typography>
       <Box display="flex" flexDirection="row" gap={2}>
         <TextField
           fullWidth

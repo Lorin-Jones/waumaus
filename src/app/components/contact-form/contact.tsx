@@ -31,14 +31,30 @@ export const ContactForm: React.FC = () => {
   const { initialValues, onSubmit, validationSchema } = useContactForm();
 
   return (
-    <Formik
-      initialValues={initialValues}
-      onSubmit={onSubmit}
-      validationSchema={validationSchema}
-      validateOnChange={false}
-      validateOnBlur={false}
+    <Box
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        padding: theme.spacing(4),
+        backgroundColor: theme.palette.primary.main,
+      }}
     >
-      <ContactFormFields />
-    </Formik>
+      <Box display={'flex'} justifyContent={'center'}>
+        <Typography variant="h3" color="white" sx={{ pb: 4 }}>
+          Contact Us
+        </Typography>
+      </Box>
+      <Formik
+        initialValues={initialValues}
+        onSubmit={onSubmit}
+        validationSchema={validationSchema}
+        validateOnChange={false}
+        validateOnBlur={false}
+      >
+        <ContactFormFields />
+      </Formik>
+    </Box>
   );
 };

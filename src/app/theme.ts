@@ -21,6 +21,16 @@ export const theme = createTheme({
     h1: {
       fontFamily: '"rl-aqva", sans-serif',
     },
+    h2: {
+      fontFamily: '"rl-aqva", sans-serif',
+      fontSize: '3rem',
+      fontWeight: 400,
+    },
+    h3: {
+      fontFamily: '"rl-aqva", sans-serif',
+      fontSize: '2.5rem',
+      fontWeight: 400,
+    },
     h4: {
       fontFamily: '"proxima-nova-condensed", sans-serif',
       fontWeight: 400,

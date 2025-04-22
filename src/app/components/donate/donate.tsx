@@ -12,22 +12,24 @@ export const DonorSection = () => {
   }, []);
 
   return (
-    <Box sx={{ maxWidth: '423px', width: '100%', margin: '0 auto' }}>
-      <Box>
-        <Typography variant="h4">{'Donate'}</Typography>
-      </Box>
-      <Script
-        src="https://donorbox.org/widget.js"
-        strategy="afterInteractive"
-      />
+    <Box sx={{ py: 8 }}>
+      <Box sx={{ maxWidth: '423px', width: '100%', margin: '0 auto' }}>
+        <Box display={'flex'} justifyContent="center" pb={4}>
+          <Typography variant="h3">{'Donate'}</Typography>
+        </Box>
+        <Script
+          src="https://donorbox.org/widget.js"
+          strategy="afterInteractive"
+        />
 
-      {isClient && (
-        <StyledIframe
-          src="https://donorbox.org/embed/waumaus?"
-          name="donorbox"
-          allow="payment"
-        ></StyledIframe>
-      )}
+        {isClient && (
+          <StyledIframe
+            src="https://donorbox.org/embed/waumaus?"
+            name="donorbox"
+            allow="payment"
+          ></StyledIframe>
+        )}
+      </Box>
     </Box>
   );
 };
