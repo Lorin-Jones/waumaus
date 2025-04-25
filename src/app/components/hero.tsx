@@ -15,18 +15,16 @@ export const Hero: React.FC<HeroProps> = ({ header, body }) => {
       <Box
         sx={{
           bgcolor: '#FE955D',
-          width: '100%',
           display: 'flex',
           justifyContent: 'center',
-          padding: 2,
+          width: '100%',
           py: 8,
         }}
       >
         <img
           src="https://res.cloudinary.com/dlr2tm7qr/image/upload/v1745242986/WauMaus_Logo_WHITE_vdbxzh.png"
           alt="WauMaus Logo"
-          width={400}
-          height={400}
+          style={{ width: '100%', height: 'auto', maxWidth: 300 }}
         />
       </Box>
       <Box

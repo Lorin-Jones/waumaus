@@ -28,26 +28,28 @@ export const WauMaus = () => {
     <>
       {showSplash && <SplashScreen onFinish={() => setShowSplash(false)} />}
 
-      <Box sx={{ backgroundColor: theme.palette.background.default }}>
-        <ButtonAppBar />
-        <Box>
-          <Box id={'hero'}>
-            <Hero header={text.landing.wauMaus} body={text.landing.mission} />
-          </Box>
+      {!showSplash && (
+        <Box sx={{ backgroundColor: theme.palette.background.default }}>
+          <ButtonAppBar />
+          <Box>
+            <Box id={'hero'}>
+              <Hero header={text.landing.wauMaus} body={text.landing.mission} />
+            </Box>
 
-          <Box id={'about'}>
-            <AboutUs />
-          </Box>
+            <Box id={'about'}>
+              <AboutUs />
+            </Box>
 
-          <Box id={'donate'}>
-            <DonorSection />
-          </Box>
+            <Box id={'donate'}>
+              <DonorSection />
+            </Box>
 
-          <Box id={'contact'}>
-            <ContactForm />
+            <Box id={'contact'}>
+              <ContactForm />
+            </Box>
           </Box>
         </Box>
-      </Box>
+      )}
     </>
   );
 };

@@ -1,4 +1,4 @@
-import { Box, styled, Typography } from '@mui/material';
+import { Box, makeStyles, styled, Typography } from '@mui/material';
 import { useText } from '../../../text';
 import React from 'react';
 import { string } from 'yup';
@@ -6,19 +6,22 @@ import { string } from 'yup';
 type BioSectionProps = {
   img: string;
   name: string;
-  bio: string;
+  //   bio: string;
 };
 
-const BioSection: React.FC<BioSectionProps> = ({ img, name, bio }) => {
+const BioSection: React.FC<BioSectionProps> = ({ img, name }) => {
   return (
-    <Box sx={{ display: 'flex', flexDirection: 'row', gap: 8 }}>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-        <img src={img} alt={name} width={400} height={400} />
-        <Typography variant="h6">{name}</Typography>
-      </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 4 }}>
-        <Typography variant="body1">{bio}</Typography>
-      </Box>
+    <Box
+      sx={{
+        display: 'flex',
+        flexDirection: 'column',
+        gap: 4,
+        maxWidth: '400px',
+        width: '100%',
+      }}
+    >
+      <img src={img} alt={name} />
+      <Typography variant="h6">{name}</Typography>
     </Box>
   );
 };
@@ -32,7 +35,7 @@ export const AboutUs: React.FC = () => {
         sx={{
           display: 'flex',
           justifyContent: 'center',
-          pb: 4,
+          pb: 6,
           color: 'white',
         }}
       >
@@ -40,31 +43,84 @@ export const AboutUs: React.FC = () => {
           {'ABOUT US'}
         </Typography>
       </Box>
-      <Box sx={{ display: 'flex', flexDirection: 'column', gap: 16 }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 4,
+          paddingBottom: 8,
+        }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            maxWidth: '800px',
+            margin: '0 auto',
+            paddingLeft: 2,
+            paddingRight: 2,
+            fontSize: '1.5rem',
+          }}
+        >
+          {text.aboutUs.waumaus[1]}
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            maxWidth: '800px',
+            margin: '0 auto',
+            paddingLeft: 2,
+            paddingRight: 2,
+            fontSize: '1.5rem',
+          }}
+        >
+          {text.aboutUs.waumaus[2]}
+        </Typography>
+      </Box>
+      <Box>
+        <Typography
+          variant="h3"
+          sx={{ textAlign: 'center', color: 'white', paddingBottom: 6 }}
+        >
+          {text.ourTeam}
+        </Typography>
+      </Box>
+      <StyledBioSection>
         <BioSection
           img="https://res.cloudinary.com/dlr2tm7qr/image/upload/v1745165695/Reed_aaczvc.jpg"
           name={text.aboutUs.names.reed}
-          bio={text.aboutUs.bios.reedBio}
+          //   bio={text.aboutUs.bios.reedBio}
         />
         <BioSection
           img="https://res.cloudinary.com/dlr2tm7qr/image/upload/v1745246719/IMG_4729_wmv0nu.jpg"
           name={text.aboutUs.names.carl}
-          bio={text.aboutUs.bios.carlBio}
+          //   bio={text.aboutUs.bios.carlBio}
         />
         <BioSection
           img="https://res.cloudinary.com/dlr2tm7qr/image/upload/v1745249428/IMG_4304_ctgqju.jpg"
           name={text.aboutUs.names.jules}
-          bio={text.aboutUs.bios.julesBio}
+          //   bio={text.aboutUs.bios.julesBio}
         />
-      </Box>
+      </StyledBioSection>
     </StyledAboutUs>
   );
 };
 
 const StyledAboutUs = styled(Box)(({ theme }) => ({
-  padding: theme.spacing(12),
+  paddingTop: theme.spacing(12),
+  paddingBottom: theme.spacing(12),
   backgroundColor: '#DABED6',
-  [theme.breakpoints.down('xs')]: {
-    padding: theme.spacing(0),
+}));
+
+const StyledBioSection = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  flexDirection: 'row',
+  [theme.breakpoints.down('lg')]: {
+    flexDirection: 'column',
+    paddingLeft: theme.spacing(2),
+    paddingRight: theme.spacing(2),
+    gap: theme.spacing(12),
   },
+  justifyContent: 'space-evenly',
+  alignItems: 'center',
+  gap: 16,
 }));
