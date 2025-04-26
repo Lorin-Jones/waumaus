@@ -14,7 +14,7 @@ export const useText = () => {
       names: {
         reed: 'Reed Caldwell',
         carl: 'Carl Cadwell',
-        jules: 'Jules Taylor',
+        jules: 'Jules Downum',
       },
       bios: {
         reedBio:
