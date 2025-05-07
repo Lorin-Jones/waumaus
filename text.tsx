@@ -8,7 +8,7 @@ export const useText = () => {
     ourTeam: 'Our Team',
     aboutUs: {
       waumaus: {
-        1: 'WauMaus believes in the transformative power of the arts to connect people, shift perspectives, and ignite meaningful change. Our work is rooted in a vision of community and shared experience, where every performance becomes a catalyst for connection and every project an opportunity to celebrate the limitless potential of human expression. WauMaus is more than an artistic collective — it’s a movement toward a more inspired and imaginative world.',
+        1: 'WauMaus, a 501(c)3 not-for-profit, believes in the transformative power of the arts to connect people, shift perspectives, and ignite meaningful change. Our work is rooted in a vision of community and shared experience, where every performance becomes a catalyst for connection and every project an opportunity to celebrate the limitless potential of human expression. WauMaus is more than an artistic collective — it’s a movement toward a more inspired and imaginative world.',
         2: 'WauMaus was created to highlight the artistic spark of Chattanooga through unique and quirky exhibitions, performances, events, and installations. You never know where WauMaus might pop up next—maybe on the river? In the wild? Lurking in a dark alley? Who knows? Stay tuned to find out more!',
       },
       names: {
